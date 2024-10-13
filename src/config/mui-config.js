@@ -33,6 +33,7 @@ export const theme = createTheme({
       color: `${Colors.textColor}`,
     },
   },
+
   palette: {
     primary: {
       main: "#618C78",
@@ -108,6 +109,18 @@ export const theme = createTheme({
       styleOverrides: {
         maxWidthXs: {
           maxWidth: "1328px !important",
+        },
+      },
+    },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          fontWeight: 400,
+          fontSize: "14px",
+          lineHeight: "130%",
+          color: "#1d1d1d",
+          textDecoration: "none",
+          opacity: 0.5,
         },
       },
     },

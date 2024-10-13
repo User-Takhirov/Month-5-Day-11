@@ -25,7 +25,7 @@ export const Header = () => {
                 to={item.path}
                 key={item.id}
               >
-               <Navbar text={item.name}/>
+                <Navbar text={item.name} />
               </Link>
             ))}
           </Stack>
