@@ -1,7 +1,12 @@
-import React from 'react'
+import { Container } from "@mui/material";
+import React from "react";
 
 export const Footer = () => {
   return (
-    <div>Footer</div>
-  )
-}
+    <>
+      <Container maxWidth={"xs"}>
+        <div>Footer</div>
+      </Container>
+    </>
+  );
+};

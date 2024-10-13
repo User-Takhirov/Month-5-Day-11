@@ -13,24 +13,25 @@ export const theme = createTheme({
   },
   typography: {
     fontFamily: ["Ubuntu", "sans-serif"].join(","),
-  },
-  h2: {
-    fontWeight: 700,
-    fontSize: "40px",
-    lineHeight: "130%",
-    color: "#000",
-  },
-  body1: {
-    fontWeight: 400,
-    fontSize: "18px",
-    lineHeight: "100%",
-    color: `${Colors.primary}`, 
-  },
-  body2: {
-    fontWeight: 400,
-    fontSize: "14px",
-    lineHeight: "140%",
-    color: `${Colors.textColor}`,
+
+    h2: {
+      fontWeight: 700,
+      fontSize: "40px",
+      lineHeight: "130%",
+      color: "#000",
+    },
+    body1: {
+      fontWeight: 400,
+      fontSize: "18px",
+      lineHeight: "100%",
+      color: `${Colors.primary}`,
+    },
+    body2: {
+      fontWeight: 400,
+      fontSize: "14px",
+      lineHeight: "140%",
+      color: `${Colors.textColor}`,
+    },
   },
   palette: {
     primary: {
