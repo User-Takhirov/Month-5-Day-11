@@ -4,7 +4,7 @@ import React from "react";
 
 export const Navbar = ({ text }) => {
   return (
-    <Typography>
+    <Typography variant="body2">
       {text}
     </Typography>
   );

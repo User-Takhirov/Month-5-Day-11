@@ -5,6 +5,7 @@ import React from "react";
 import { NavbarLinks } from "../../Data/Navber";
 import { Link } from "react-router-dom";
 import { Colors } from "../../config/colors";
+import { Navbar } from "../../components/Navber/navbar";
 
 export const Header = () => {
   return (
@@ -20,11 +21,11 @@ export const Header = () => {
           <Stack direction={"row"} justifyContent={"space-between"} py={"30px"}>
             {NavbarLinks.map((item) => (
               <Link
-                style={{ textDecoration: "none", color: `${Colors.textColor}` }}
+                style={{ textDecoration: "none" }}
                 to={item.path}
                 key={item.id}
               >
-                <Typography variant="body1">{item.name}</Typography>
+               <Navbar text={item.name}/>
               </Link>
             ))}
           </Stack>
