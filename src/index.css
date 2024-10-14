@@ -1,3 +1,11 @@
 img {
   cursor: pointer;
 }
+
+.link {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  color: #1d1d1d;
+  text-decoration: none;
+}

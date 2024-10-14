@@ -11,6 +11,7 @@ export const theme = createTheme({
       xl: 1536,
     },
   },
+
   typography: {
     fontFamily: ["Ubuntu", "sans-serif"].join(","),
 
@@ -18,13 +19,20 @@ export const theme = createTheme({
       fontWeight: 700,
       fontSize: "40px",
       lineHeight: "130%",
-      color: "#000",
+      color: `${Colors.textColor}`,
+      "@media (max-width:900px)": {
+        fontWeight: 700,
+        fontSize: "18px",
+        lineHeight: "130%",
+        color: `${Colors.textColor}`,
+      },
     },
+
     body1: {
       fontWeight: 400,
       fontSize: "18px",
       lineHeight: "100%",
-      color: `${Colors.primary}`,
+      color: `${Colors.textColor}`,
     },
     body2: {
       fontWeight: 400,
@@ -118,9 +126,8 @@ export const theme = createTheme({
           fontWeight: 400,
           fontSize: "14px",
           lineHeight: "130%",
-          color: "#1d1d1d",
+          color: "#878787",
           textDecoration: "none",
-          opacity: 0.5,
         },
       },
     },

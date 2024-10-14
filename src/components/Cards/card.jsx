@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { theme } from "../../config/mui-config";
 import { Box, IconButton, Rating, Stack, Typography } from "@mui/material";
 import { HeartIcon } from "../../assets/icon/heart-icon";
-
+import { LikedHeartIcon } from "../../assets/icon/liked-heart-icon";
 const CardWrapper = styled.div`
   padding: 20px;
   border-radius: 10px;
@@ -31,6 +31,7 @@ export const Card = ({
   price,
   instalment,
 }) => {
+  const [active, setActive] = React.useState(false);
   return (
     <>
       <CardWrapper>
@@ -41,8 +42,11 @@ export const Card = ({
           justifyContent={"space-between"}
         >
           <div>{newProduct && <NewCardBadge>Новинка</NewCardBadge>}</div>
-          <IconButton style={{ padding: "0px" }}>
-            <HeartIcon />
+          <IconButton
+            onClick={() => setActive(!active)}
+            style={{ padding: "0px" }}
+          >
+            {active ? <LikedHeartIcon /> : <HeartIcon />}
           </IconButton>
         </Stack>
         <Box mb={"20px"} textAlign={"center"}>
