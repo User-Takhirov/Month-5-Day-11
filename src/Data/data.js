@@ -77,7 +77,7 @@ export const Data = [
     title: "Aster Q893A LVIZON LVIZON",
     size: "60x100",
     location: "Казахстан",
-    raiting: 3,
+    raiting: 4,
     price: "160.00",
     instalment: {
       price: "13.333",
@@ -91,7 +91,7 @@ export const Data = [
     title: "Aster Q893A LVIZON LVIZON",
     size: "60x100",
     location: "Казахстан",
-    raiting: 3,
+    raiting: 3.5,
     price: "160.00",
     instalment: {
       price: "13.333",
@@ -105,7 +105,7 @@ export const Data = [
     title: "Aster Q893A LVIZON LVIZON",
     size: "60x100",
     location: "Казахстан",
-    raiting: 3,
+    raiting: 5,
     price: "160.00",
     instalment: {
       price: "13.333",

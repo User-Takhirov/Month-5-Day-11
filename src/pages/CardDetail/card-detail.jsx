@@ -8,6 +8,8 @@ import {
   Stack,
   IconButton,
   useMediaQuery,
+  Button,
+  Link,
 } from "@mui/material";
 import { Data } from "../../Data/data";
 import mobileCarpet from "../../assets/img/mobile-detail-carpet.svg";
@@ -19,6 +21,7 @@ import { MobileCarpetLiked } from "../../assets/icon/mobile-carpet-liked";
 import MainCarpet from "../../assets/img/Main-carpets.svg";
 import { DecrementIcon } from "../../assets/icon/decrement-icon";
 import { PlusIcon } from "../../assets/icon/plus-icon";
+import { WhatsupIcon } from "../../assets/icon/whatsup-icon";
 export const CardDetail = () => {
   const { id } = useParams();
 
@@ -41,10 +44,36 @@ export const CardDetail = () => {
               <Rating value={DataDetails.raiting} precision={0.5} readOnly />
               <Typography variant="body2">Код товара: BAL733</Typography>
             </Stack>
+            <Box display={{ xs: "none", md: "block" }}>
+              <Box mt={"50px"} mb={"10px"}>
+                <Typography lineHeight={"145%"} fontSize={"40px"} variant="h3">
+                  {DataDetails.title}
+                </Typography>
+              </Box>
+              <Stack
+                direction={"row"}
+                justifyContent={"space-between"}
+                alignItems={"center"}
+                mb={"16px"}
+              >
+                <Stack gap={"16px"} alignItems={"center"} direction={"row"}>
+                  <Stack alignItems={"center"} direction={"row"} gap={"8px"}>
+                    <Rating precision={0.5} value={DataDetails.raiting} readOnly />
+                    <Link>0 отзывов</Link>
+                  </Stack>
+                  <Link href="#">В наличии: 10 штук</Link>
+                </Stack>
+                <Link>Код товара: BAL733</Link>
+              </Stack>
+              <hr />
+            </Box>
             <Stack
               alignItems={{ lg: "center" }}
-              gap={"40px"}
+              justifyContent={"space-between"}
               direction={{ xs: "column", lg: "row" }}
+              mt={"24px"}
+              mb={{ xs: "50px", lg: "100px" }}
+              gap={"40px"}
             >
               {md ? (
                 <Box textAlign={"center"} mb={"24px"}>
@@ -96,12 +125,16 @@ export const CardDetail = () => {
                     </Typography>
                   </Stack>
                 </Stack>
-                <Stack justifyContent={"center"} direction={"row"}>
+                <Stack
+                  justifyContent={{ md: "center", lg: "start" }}
+                  direction={"row"}
+                >
                   <Stack
                     direction={"row"}
-                    justifyContent={"center"}
+                    alignItems={"center"}
                     mb={"16px"}
-                    gap={"90px"}
+                    gap={"125px"}
+                    justifyContent={{ md: "center" }}
                     display={{ xs: "none", md: "flex" }}
                   >
                     <Stack
@@ -116,7 +149,7 @@ export const CardDetail = () => {
                         {DataDetails.size}
                       </Typography>
                     </Stack>
-                    <Stack direction={"row"} justifyContent={"center"}>
+                    <Stack direction={"row"}>
                       <Typography
                         color={Colors.grey}
                         variant="body2"
@@ -145,7 +178,12 @@ export const CardDetail = () => {
                 >
                   {DataDetails.title}
                 </Typography>
-                <Stack gap={"90px"} mb={"32px"} direction={"row"}>
+                <Stack
+                  gap={"90px"}
+                  mb={"32px"}
+                  justifyContent={{ md: "center", lg: "start" }}
+                  direction={"row"}
+                >
                   <Typography
                     color={theme.palette.primary.main}
                     variant="body2"
@@ -163,7 +201,7 @@ export const CardDetail = () => {
                   direction={"row"}
                   gap={"16px"}
                   justifyContent={"space-between"}
-                  mb={"16px"}
+                  mb={"32px"}
                 >
                   <Box width={"100%"}>
                     <SecondaryButton>В корзину</SecondaryButton>
@@ -175,6 +213,40 @@ export const CardDetail = () => {
                     {active ? <MobileCarpetLiked /> : <MobileCarpet />}
                   </IconButton>
                 </Stack>
+                <Stack
+                  display={{ xs: "none", lg: "flex" }}
+                  boxShadow={`0 0 7px 0 rgba(0, 0, 0, 0.1); background: #fff`}
+                  py={"20px"}
+                  pl={"20px"}
+                  mb={"32px"}
+                >
+                  <Link mb={"20px"} href="#">
+                    Возврат в течение 14 дней
+                  </Link>
+                  <Link mb={"20px"} href="#">
+                    Среднее время доставки 2.5 дня
+                  </Link>
+                  <Link color={theme.palette.primary.main} href="#">
+                    Подробнее
+                  </Link>
+                </Stack>
+                <Box display={{ xs: "none", lg: "block" }}>
+                  <Box mb={"16px"} width={"334px"}>
+                    <Typography fontWeight={"500"} variant="body2">
+                      Нужна помощь с выбором? Просто напишите нам в WhatsApp и
+                      мы обязательно вам поможем!
+                    </Typography>
+                  </Box>
+                  <Box width={"290px"}>
+                    <Button
+                      style={{ width: "100%" }}
+                      startIcon={<WhatsupIcon />}
+                      variant="contained"
+                    >
+                      Написать
+                    </Button>
+                  </Box>
+                </Box>
               </Stack>
             </Stack>
           </>
