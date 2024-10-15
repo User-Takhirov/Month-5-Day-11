@@ -40,6 +40,7 @@ export const Home = () => {
               <Grid2 size={{ sm: 12, md: 6, lg: 3 }} key={item.id}>
                 <Box key={item.id}>
                   <Card
+                    id={item.id}
                     new={item.new}
                     img={item.img}
                     title={item.title}
@@ -81,6 +82,7 @@ export const Home = () => {
               <Grid2 size={{ sm: 12, md: 6, lg: 3 }} key={item.id}>
                 <Box key={item.id}>
                   <Card
+                    id={item.id}
                     new={item.new}
                     img={item.img}
                     title={item.title}

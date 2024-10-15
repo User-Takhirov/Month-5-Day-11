@@ -5,4 +5,5 @@ export const Colors = {
   backgroundNavbar: "#f9f9f9",
   textColor: "#1d1d1d",
   inputBg: "#eff3f6",
+  grey:"#8C8C8C"
 };

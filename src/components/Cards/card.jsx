@@ -4,6 +4,8 @@ import { theme } from "../../config/mui-config";
 import { Box, IconButton, Rating, Stack, Typography } from "@mui/material";
 import { HeartIcon } from "../../assets/icon/heart-icon";
 import { LikedHeartIcon } from "../../assets/icon/liked-heart-icon";
+import { Link } from "react-router-dom";
+import { Colors } from "../../config/colors";
 const CardWrapper = styled.div`
   padding: 20px;
   border-radius: 10px;
@@ -20,9 +22,18 @@ const NewCardBadge = styled.p`
   top: 0px;
   left: 0;
 `;
+const TitleLink = styled.h3`
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  color: ${Colors.textColor};
+  :hover {
+    color: ${theme.palette.primary.main};
+  }
+`;
 export const Card = ({
   new: newProduct,
-  key,
+  id,
   img,
   title,
   size,
@@ -52,9 +63,16 @@ export const Card = ({
         <Box mb={"20px"} textAlign={"center"}>
           <img src={img} alt="img" />
         </Box>
-        <Typography mb={"8px"} fontWeight={500} variant="body1">
-          {title}
-        </Typography>
+        <Link style={{ textDecoration: "none" }} to={`/home/detail/${id}`}>
+          <TitleLink
+            className="titleLink"
+            mb={"8px"}
+            fontWeight={500}
+            variant="body1"
+          >
+            {title}
+          </TitleLink>
+        </Link>
         <Typography mb={"8px"} variant="body2">
           Размер: {size}
         </Typography>
